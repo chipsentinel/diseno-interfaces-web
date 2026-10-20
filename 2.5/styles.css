@@ -1,0 +1,44 @@
+﻿body{
+    margin:auto;
+    display: flex;
+    font-display: row;
+}
+
+.demo {
+    background-color: red;
+    width: 400px;
+    height: 600px;
+    margin-bottom: 20px;
+    display: inline-block;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.demo1 {
+    background-image: url("imagen1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.demo2 {
+    background-image: url("imagen1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.demo2, .demo3{
+    border: 3px solid white;
+}
+.demo3 {
+    background-image: url("imagen2.png");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.demo4 {
+    background-image: url("imagen1.png"), url("imagen2.png");
+    background-size: 50% auto, 50% auto;
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+}

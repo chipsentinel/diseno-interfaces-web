@@ -1,0 +1,52 @@
+body{
+    margin:auto;
+}
+.grande {
+  margin-top: 0px;
+  width: 800px;
+  height:1000px;
+  background: blue;
+  position: relative;
+  float:right;
+}
+
+.menos-grande {
+  margin-top: 50px;
+  width: 200px;
+  height:100px;
+  background: purple;
+  position: relative;
+  float:left;
+}
+
+p{
+  margin-top: 1000px;
+}
+.peque{
+  margin-top: 200px;
+  width: 100px;
+  height:50px;
+  background: yellow;
+  position: absolute;
+  top: -200;
+  left: 10px;
+  float: initial;
+}
+
+.top {
+  background: red;
+  top:0;
+  width:880px;
+  height:50px;
+  position:sticky;
+  float: inherit; 
+}
+
+.otro {
+  background: green;
+  width:800px;
+  height:500px;
+  position:fixed;
+  float:none;
+  bottom: 200;
+}

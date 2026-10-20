@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.logo {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.datos {
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+h3 {
+    color: #17365D;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.ubicacion {
+    color: #0079ac;
+}

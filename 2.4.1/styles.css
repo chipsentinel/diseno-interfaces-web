@@ -1,0 +1,13 @@
+﻿div.demo1 {
+  display: inline-block;
+  height: 50px;
+  background-color: red;
+  color: white;
+}
+
+div.demo2 {
+  display: inline;
+  height: 50px;
+  background-color: green;
+  color: white;
+}
