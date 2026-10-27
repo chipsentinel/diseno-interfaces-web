@@ -82,7 +82,7 @@ MOBILE (< 992px)
 /* Contenido principal */
 
 .main {
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .presentacion {
@@ -95,7 +95,7 @@ MOBILE (< 992px)
 }
 
 .presentacion__texto h1 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     margin: 10px 0;
 }
@@ -103,16 +103,27 @@ MOBILE (< 992px)
 .presentacion__texto p {
     font-size: 11px;
     line-height: 1.4;
+    margin-bottom: 10px;
 }
+
+/* Vídeo */
 
 .presentacion__video {
     width: 100%;
     height: 180px;
     background-color: #d1e5f5;
+    padding: 80px 45px;
 }
 
 .presentacion__video video {
     display: none;
+}
+
+.presentacion__video::after {
+    content: "VÍDEO";
+    float: left;
+    color: #333;
+    font-size: 12px;
 }
 
 /* Soluciones */
@@ -136,17 +147,31 @@ MOBILE (< 992px)
 .solucion__texto p {
     font-size: 11px;
     line-height: 1.4;
+    margin-bottom: 10px;
 }
+
+/* Imágenes */
 
 .solucion__imagen {
     width: 100%;
     height: 120px;
     background-color: #d1e5f5;
     border: 1px solid #aaa;
+    position: relative;
 }
 
 .solucion__imagen img {
     display: none;
+}
+
+.solucion__imagen::after {
+    content: "imagen";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 12px;
 }
 
 .solucion--invertida {
@@ -157,8 +182,9 @@ MOBILE (< 992px)
 
 .footer {
     display: flex;
-    justify-content: space-around;
-    padding: 15px 5px;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 15px;
     border-top: 1px solid #888;
 }
 
@@ -168,9 +194,15 @@ MOBILE (< 992px)
     font-size: 11px;
 }
 
+/* Mostrar solo 3 enlaces en móvil */
+
+.footer a:nth-child(n+4) {
+    display: none;
+}
+
 /*
 ==================
-TABLET (>= 992px)
+DESKTOP (>= 992px)
 ==================
 */
 
@@ -222,9 +254,12 @@ TABLET (>= 992px)
         margin: 0 0 10px;
     }
 
+    /* Vídeo */
+
     .presentacion__video {
         width: 65%;
         height: 300px;
+        padding: 0;
         background-color: white;
     }
 
@@ -234,6 +269,10 @@ TABLET (>= 992px)
         height: 100%;
         background-color: white;
         border: 1px solid #aaa;
+    }
+
+    .presentacion__video::after {
+        display: none;
     }
 
     /* Soluciones */
@@ -254,6 +293,8 @@ TABLET (>= 992px)
         font-size: 20px;
     }
 
+    /* Imágenes */
+
     .solucion__imagen {
         flex: 2;
         min-width: 0;
@@ -268,6 +309,10 @@ TABLET (>= 992px)
         object-fit: cover;
     }
 
+    .solucion__imagen::after {
+        display: none;
+    }
+
     .solucion--invertida {
         flex-direction: row;
     }
@@ -275,7 +320,12 @@ TABLET (>= 992px)
     /* Pie de página */
 
     .footer {
+        justify-content: space-around;
         padding: 20px;
+    }
+
+    .footer a:nth-child(n+4) {
+        display: block;
     }
 
 }
