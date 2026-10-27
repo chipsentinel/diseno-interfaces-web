@@ -1,0 +1,44 @@
+/* Eliminar márgenes de la página */
+body {
+    margin: 0;
+}
+
+/* MOBILE (< 992px) */
+
+.topnav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topnav a {
+    flex: 1;
+    display: block;
+    background-color: #303030;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-family: serif;
+    font-size: 12px;
+    border-bottom: 1px solid #888;
+}
+
+.topnav a:hover {
+    background-color: #888;
+}
+
+/* DESKTOP (>= 992px) */
+
+@media (min-width: 992px) {
+
+    .topnav {
+        flex-direction: row;
+    }
+
+    .topnav a {
+        border-right: 1px solid #888;
+        border-bottom: none;
+    }
+
+}
