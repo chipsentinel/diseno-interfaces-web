@@ -107,14 +107,12 @@ MOBILE (< 992px)
 
 .presentacion__video {
     width: 100%;
+    height: 180px;
+    background-color: #d1e5f5;
 }
 
 .presentacion__video video {
-    display: block;
-    width: 100%;
-    height: 180px;
-    background-color: #d1e5f5;
-    border: none;
+    display: none;
 }
 
 /* Soluciones */
@@ -143,14 +141,12 @@ MOBILE (< 992px)
 .solucion__imagen {
     width: 100%;
     height: 120px;
+    background-color: #d1e5f5;
     border: 1px solid #aaa;
 }
 
 .solucion__imagen img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none;
 }
 
 .solucion--invertida {
@@ -228,10 +224,14 @@ DESKTOP (>= 992px)
 
     .presentacion__video {
         width: 65%;
+        height: 300px;
+        background-color: white;
     }
 
     .presentacion__video video {
-        height: 300px;
+        display: block;
+        width: 100%;
+        height: 100%;
         background-color: white;
         border: 1px solid #aaa;
     }
@@ -258,6 +258,14 @@ DESKTOP (>= 992px)
         flex: 2;
         min-width: 0;
         height: 150px;
+        background-color: white;
+    }
+
+    .solucion__imagen img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .solucion--invertida {
