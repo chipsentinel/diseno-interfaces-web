@@ -1,0 +1,273 @@
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: #666;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #aaa;
+}
+
+/*
+================
+MOBILE (< 992px)
+================
+*/
+
+/* Cabecera */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d1e5f5;
+    border: 1px solid #888;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.header__nav {
+    width: 100%;
+}
+
+/* Menú */
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.header__item {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.header__item a {
+    display: block;
+    padding: 8px 2px;
+    text-decoration: none;
+    color: #333;
+    font-size: 11px;
+}
+
+.header__item a:hover {
+    background-color: #ddd;
+}
+
+/* Contenido principal */
+
+.main {
+    padding: 10px;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion__texto {
+    width: 100%;
+}
+
+.presentacion__texto h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.presentacion__texto p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.presentacion__video {
+    width: 100%;
+}
+
+.presentacion__video video {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-color: #d1e5f5;
+    border: none;
+}
+
+/* Soluciones */
+
+.solucion {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+}
+
+.solucion__texto {
+    width: 100%;
+}
+
+.solucion__texto h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.solucion__texto p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.solucion__imagen {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #aaa;
+}
+
+.solucion__imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.solucion--invertida {
+    flex-direction: column;
+}
+
+/* Pie de página */
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 5px;
+    border-top: 1px solid #888;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+}
+
+/*
+==================
+DESKTOP (>= 992px)
+==================
+*/
+
+@media (min-width: 992px) {
+
+    .pagina {
+        max-width: 800px;
+    }
+
+    /* Cabecera */
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .header__logo {
+        background-color: #444;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .header__nav {
+        width: 80%;
+    }
+
+    .header__menu {
+        margin: 0;
+    }
+
+    /* Contenido principal */
+
+    .main {
+        padding: 15px;
+    }
+
+    .presentacion {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .presentacion__texto {
+        width: 35%;
+    }
+
+    .presentacion__texto h1 {
+        font-size: 28px;
+        margin: 0 0 10px;
+    }
+
+    .presentacion__video {
+        width: 65%;
+    }
+
+    .presentacion__video video {
+        height: 300px;
+        background-color: white;
+        border: 1px solid #aaa;
+    }
+
+    /* Soluciones */
+
+    .solucion {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin: 25px 15px;
+    }
+
+    .solucion__texto {
+        flex: 3;
+        min-width: 0;
+    }
+
+    .solucion__texto h2 {
+        font-size: 20px;
+    }
+
+    .solucion__imagen {
+        flex: 2;
+        min-width: 0;
+        height: 150px;
+    }
+
+    .solucion--invertida {
+        flex-direction: row;
+    }
+
+    /* Pie de página */
+
+    .footer {
+        padding: 20px;
+    }
+
+}
